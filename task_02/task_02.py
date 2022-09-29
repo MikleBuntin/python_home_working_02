@@ -1,16 +1,19 @@
-# This is a sample Python script.
+# Задание 2.
+# Напишите программу, которая принимает на вход число N
+# и выдает набор произведений чисел от 1 до N.
+# Пример:
+# пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def factorial(n):
+    factorial = 1
+    for number in range(1, n + 1):
+        factorial = factorial * number
+    return factorial
 
+n = int(input("Введите целое положительное число: "))
+array = []
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+for count in range(n):
+    array.append(factorial(count))
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(array)
